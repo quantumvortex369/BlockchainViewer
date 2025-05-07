@@ -22,7 +22,7 @@ os.makedirs("blockchainviewer_data", exist_ok=True)
 # Menú para seleccionar qué tipo de transacciones guardar
 def seleccionar_tipo_guardado():
     console.print("[bold green]¿Qué tipo de transacciones quieres guardar en el CSV?[/bold green]")
-    console.print("1. Todas\n2. Ballenas \n3. Fee bajo 🕸️\n4. Mixers 🎛️")
+    console.print("1. Todas\n2. Ballenas \n3. Fee bajo \n4. Mixers ")
     opciones = input("Elige una o más opciones (por ejemplo: 2,4): ").strip()
     opciones_seleccionadas = opciones.split(",")
     # Asegurarse de que las opciones sean válidas
