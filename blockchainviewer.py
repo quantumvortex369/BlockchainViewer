@@ -22,7 +22,7 @@ os.makedirs("blockchainviewer_data", exist_ok=True)
 # Menú para seleccionar qué tipo de transacciones guardar
 def seleccionar_tipo_guardado():
     console.print("[bold green]¿Qué tipo de transacciones quieres guardar en el CSV?[/bold green]")
-    console.print("1. Todas\n2. Ballenas 🐋\n3. Fee bajo 🕸️\n4. Mixers 🎛️")
+    console.print("1. Todas\n2. Ballenas \n3. Fee bajo 🕸️\n4. Mixers 🎛️")
     opciones = input("Elige una o más opciones (por ejemplo: 2,4): ").strip()
     opciones_seleccionadas = opciones.split(",")
     # Asegurarse de que las opciones sean válidas
@@ -58,11 +58,11 @@ def mostrar_transaccion(tx):
     #  Lógica de resaltado
     categoria = []
     if total_btc > 50:
-        categoria.append("🐋 BALLENA")
+        categoria.append("BALLENA")
     if fee < 0.00005:
-        categoria.append("🕸️ FEE BAJO")
+        categoria.append("FEE BAJO")
     if num_outputs > 30:
-        categoria.append("🎛️ MIXER")
+        categoria.append("MIXER")
 
     timestamp = datetime.fromtimestamp(tx["x"]["time"]).strftime("%Y-%m-%d %H:%M:%S")
 
